@@ -26,7 +26,7 @@
 </div>
 
 
-Our project **CALM** aims to better utilize large language models (LLMs) to study issues related to credit and risk assessment in the financial industry, including data construction, model training, model evaluation, and bias analysis. 
+This project is inspired from **CALM** and aims to address the bias issue in credit risk assessment using fine-tuning and RAG. 
 
 We will open the following parts in this project:
 * [Credit and Risk Assessment Instruction Dataset](./data)
