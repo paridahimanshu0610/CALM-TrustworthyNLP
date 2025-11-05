@@ -7,6 +7,7 @@ from aif360.explainers import MetricTextExplainer
 import random
 import json
 from process import predo, preres_cc
+import os
 
 '''data preprocess'''
 feature_size = 8
@@ -20,7 +21,8 @@ mean_list = ['gender', 'state','cardholder','balance','numTrans',
 # 原数据处理
 # data中所有数据需要修改成数值格式
 # todo age 和gender需要进一步划分成二分类？
-
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
 train_data = pd.read_csv('./bias_data/ccfraud_train.csv', sep=',', names=[i for i in range(feature_size)])
 train = pd.DataFrame(train_data)
 train.columns = mean_list
@@ -31,7 +33,7 @@ test.columns = mean_list # 表格重新写表头
 
 # method结果读取
 # todo 标签需要转换适配各个数据集
-res, index = preres_cc(test.values.tolist(),'our/flare_ccfraud_desc_write_out_info.json')
+res, index = preres_cc(test.values.tolist(), os.path.join(current_dir, 'chatgpt/flare_ccfraud_desc/flare_ccfraud_desc_write_out_info.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
 

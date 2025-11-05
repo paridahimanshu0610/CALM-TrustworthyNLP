@@ -6,11 +6,15 @@ from aif360.datasets import BinaryLabelDataset
 from aif360.explainers import MetricTextExplainer
 import random
 import json
+import os
 from process import predo, preres
 
 '''data preprocess'''
-name = "german.data"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
+# '/Users/himanshu/Documents/Projects/CALM-TrustworthyNLP/data/credit_scoring/German/german.data' # "german.data"
 feature_size = 20+1
+name = os.path.join(current_dir, '../../data/credit_scoring/German/german.data')
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
 
 if train_size + dev_size + test_size != 1:
@@ -43,7 +47,7 @@ test.columns = mean_list # 表格重新写表头
 
 # method结果读取
 # todo 标签需要转换适配各个数据集
-res = preres(test.values.tolist(),'our/flare_german_desc_write_out_info.json')
+res = preres(test.values.tolist(), os.path.join(current_dir, 'chatgpt/flare_german_desc/flare_german_desc_write_out_info.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
 
@@ -54,6 +58,7 @@ res.columns = mean_list
 # df 为数据
 # label_names 作为目标的变量名
 # protected_attribute_names 需要保护的变量名，含偏见的变量名
+print('data bias test for test data:')
 test_data = BinaryLabelDataset(favorable_label=1, unfavorable_label=2, df=test, label_names=['target'], protected_attribute_names=['Personal status and sex','Age in years','foreign worker'])
 
 # unprivileged_groups 弱势群体，例如{gender：1}表示弱势群体是女性，list[]内可以叠加，也可以多次使用分开算
@@ -73,7 +78,7 @@ text_res = MetricTextExplainer(metric)
 
 print('DI:', text_res.disparate_impact())
 
-
+print('data bias test for train data:')
 train_data = BinaryLabelDataset(favorable_label=1, unfavorable_label=2, df=train, label_names=['target'], protected_attribute_names=['Personal status and sex','Age in years','foreign worker'])
 
 # unprivileged_groups 弱势群体，例如{gender：1}表示弱势群体是女性，list[]内可以叠加，也可以多次使用分开算
@@ -101,6 +106,7 @@ print('DI:', text_res.disparate_impact())
 # df 为method输出的数据
 # label_names 作为目标的变量名
 # protected_attribute_names 需要保护的变量名，含偏见的变量名
+print('method bias test for test data:')
 res_data = BinaryLabelDataset(favorable_label=1, unfavorable_label=2, df=res, label_names=['target'], protected_attribute_names=['Personal status and sex','Age in years','foreign worker'])
 
 metric = ClassificationMetric(test_data, res_data, unprivileged_groups=[{'foreign worker':0}], privileged_groups=[{'foreign worker':1}])
