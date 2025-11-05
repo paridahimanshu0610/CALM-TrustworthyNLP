@@ -1,6 +1,6 @@
 # Debiasing Credit Risk and Assessment Language Model (DeCALM)
 
-This project is inspired from **[CALM](http://arxiv.org/abs/2310.00566)** and aims to address the bias issue in credit risk assessment using fine-tuning and RAG. 
+This project is inspired from **[CALM](http://arxiv.org/abs/2310.00566)** and aims to address the bias issue in credit risk assessment using fine-tuning and prompt method. 
 
 Following are the important components of this project:
 * [Credit and Risk Assessment Instruction Dataset](./data)
