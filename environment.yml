@@ -1,0 +1,20 @@
+name: calm
+dependencies:
+  - python=3.11.4
+  - pandas
+  - numpy
+  - scikit-learn
+  - pip
+  - pip:
+      - aif360
+      - accelerate
+      - bitsandbytes
+      - fire
+      - datasets
+      - huggingface_hub
+      - torch
+      - tqdm
+      - transformers
+      - deepspeed
+      - gradio
+      - xformers
