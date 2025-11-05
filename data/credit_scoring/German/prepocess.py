@@ -6,6 +6,9 @@ import os
 
 # todo use
 #####config
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
+
 name = "german.data"
 feature_size = 20 + 1  # Target_index = -1
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
@@ -99,7 +102,7 @@ def process(data, mean_list, dict):
     return data_tmp
 
 
-def json_save(data, dataname, mean_list=mean_list, dict=dict, out_jsonl=False):
+def json_save(data, dataname, mean_list=mean_list, dict=dict, out_jsonl=True):
     data_tmp = process(data, mean_list, dict)
     if out_jsonl:
         with open('{}.jsonl'.format(dataname), 'w') as f:
@@ -109,10 +112,10 @@ def json_save(data, dataname, mean_list=mean_list, dict=dict, out_jsonl=False):
             print('-----------')
             print("write done")
         f.close()
-    df = pd.DataFrame(data_tmp)
-    # 保存为 Parquet 文件
-    parquet_file_path = f'data/{dataname}.parquet'
-    df.to_parquet(parquet_file_path, index=False)
+    # df = pd.DataFrame(data_tmp)
+    ## 保存为 Parquet 文件
+    # parquet_file_path = f'{dataname}.parquet'
+    # df.to_parquet(parquet_file_path, index=False)
     return None
 
 
@@ -147,7 +150,7 @@ index_left = list(filter(lambda x: x not in train_ind + dev__ind, [i for i in ra
 test_data = [data[i] for i in index_left]
 
 columns = [i for i in range(feature_size)]
-save_bias_data(test_data, train_data, columns)
+# save_bias_data(test_data, train_data, columns)
 
 json_save(test_data, 'test')
 json_save(train_data, 'train')
