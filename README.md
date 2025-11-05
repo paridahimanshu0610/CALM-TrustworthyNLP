@@ -1,42 +1,12 @@
-# Empowering Many, Biasing a Few: Generalist Credit Scoring through Large Language Models
+# Debiasing Credit Risk and Assessment Language Model (DeCALM)
 
-<div>
-<div align="left">
-    <a target='_blank'>Duanyu Feng<sup>1</sup></span>&emsp;
-    <a target='_blank'>Yongfu Dai<sup>1</sup></span>&emsp;
-    <a href='https://jimin.chancefocus.com/' target='_blank'>Jimin Huang<sup>2</sup></a>&emsp;
-    <a target='_blank'>Yifang Zhang<sup>1</sup></a>&emsp;
-    <a target='_blank'>Qianqian Xie<sup>3</sup></a>&emsp;
-    <a target='_blank'>Weiguang Han<sup>3</sup></a>&emsp;
-    <a href='https://warrington.ufl.edu/directory/person/12693/' target='_blank'>Alejandro Lopez-Lira<sup>4</sup></a>&emsp;
-    <a target='_blank'>Hao Wang*<sup>1</sup></a>
-</div>
-<div>
-<div align="left">
-    <sup>1</sup>Sichuan University&emsp;
-    <sup>2</sup>ChanceFocus AMC&emsp;
-    <sup>3</sup>Wuhan University&emsp;
-    <sup>4</sup>University of Florida
-</div>
-<div align="left">
-    <img src='https://i.postimg.cc/NjKhDkGY/DFAF986-CCD6529-E52-D7830-F180-D-C37-C7-DEE-4340.png' alt='Sichuan University Logo' height='100px'>&emsp;
-    <img src='https://i.postimg.cc/xTsgsrqN/logo11.png' alt='ChanceFocus AMC Logo' height='100px'>&emsp;
-    <img src='https://i.postimg.cc/CLtkBwz7/57-EDDD9-FB0-DF712-F3-AB627163-C2-1-EF15655-13-FCA.png' alt='Wuhan University Logo' height='100px'>&emsp;
-     <img src='https://i.postimg.cc/XY1s2RHD/University-of-Florida-Logo-1536x864.jpg' alt='University of Florida Logo' height='100px'>
-</div>
+This project is inspired from **[CALM](http://arxiv.org/abs/2310.00566)** and aims to address the bias issue in credit risk assessment using fine-tuning and RAG. 
 
-
-This project is inspired from **CALM** and aims to address the bias issue in credit risk assessment using fine-tuning and RAG. 
-
-We will open the following parts in this project:
+Following are the important components of this project:
 * [Credit and Risk Assessment Instruction Dataset](./data)
 * [Credit and Risk Assessment Benchmark](#credit-and-risk-assessment-benchmark)
 * [Credit and Risk Assessment LLM Bias Analysis](./src/bias)
 * [**C**redit and Risk **A**ssessment **L**arge Language **M**odel (CALM-7B)](https://huggingface.co/daishen/CALM-7B)
-* [Our Paper "Empowering Many, Biasing a Few: Generalist Credit Scoring through Large Language Models"](https://arxiv.org/abs/2310.00566)
-
-## News
-**[2023/10/15]** Our [Credit and Risk Assessment Large Language Model (CALM-7B)](https://huggingface.co/daishen/CALM-7B) has been officially released
 
 **[2023/10/01]** CALM v1.0 has been officially released, open-sourcing the [Instruction Dataset](./data), [Benchmark](#credit-and-risk-assessment-benchmark), [Bias Analysis](./src/bias) and [paper](https://arxiv.org/abs/2310.00566).
 
