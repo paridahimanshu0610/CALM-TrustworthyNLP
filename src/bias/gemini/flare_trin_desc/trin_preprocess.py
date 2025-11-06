@@ -90,13 +90,102 @@ def json_save(data, dataname, mean_list=mean_list, add_debiasing_prompt=False):
     f.close()
     return data_tmp
 
+###### Function to get equal proportion of data for people above and below 45 years
+import random
+
+def stratified_age_sample(data, n_total=50, threshold=45, seed=None, allow_replacement=True):
+    """
+    data: list of lists, age is at index -1 (last column)
+    n_total: total number of rows to sample (default 50)
+    threshold: age threshold (default 45). Grouping: below = age < threshold, above = age >= threshold
+               (change to > or <= if you want different inclusion rules)
+    seed: integer random seed, or None
+    allow_replacement: if True and a group has < n_per_group rows, sample with replacement to reach target
+    
+    returns: list of sampled rows (length n_total) and a dict with counts for each group
+    """
+    if seed is not None:
+        random.seed(seed)
+
+    # ensure even split; if n_total is odd, the extra goes to the "above" group
+    n_per_group = n_total // 2
+    extra = n_total - 2 * n_per_group
+    n_below_target = n_per_group
+    n_above_target = n_per_group + extra  # puts extra (if any) into 'above' group
+
+    below = []
+    above = []
+    for row in data:
+        try:
+            age = float(row[-1])
+        except Exception:
+            # skip rows with invalid age — or you can raise instead
+            continue
+        if age < threshold:
+            below.append(row)
+        else:
+            above.append(row)
+
+    sampled = []
+    info = {
+        "n_total_rows": len(data),
+        "n_below_available": len(below),
+        "n_above_available": len(above),
+        "n_below_target": n_below_target,
+        "n_above_target": n_above_target,
+    }
+
+    # helper to sample with/without replacement and handle shortages
+    def pick(pool, k):
+        if len(pool) >= k:
+            return random.sample(pool, k)
+        else:
+            if allow_replacement and len(pool) > 0:
+                # sample with replacement
+                return [random.choice(pool) for _ in range(k)]
+            else:
+                # if pool empty or replacement not allowed, take whatever available
+                return list(pool)
+
+    sampled_below = pick(below, n_below_target)
+    sampled_above = pick(above, n_above_target)
+
+    # If either returned fewer than target and allow_replacement==False, try to fill from the other group
+    if not allow_replacement:
+        deficit = (n_below_target - len(sampled_below)) + (n_above_target - len(sampled_above))
+        if deficit > 0:
+            # take additional rows from whichever group has extras
+            extras_pool = [r for r in (below + above) if r not in sampled_below and r not in sampled_above]
+            take = extras_pool[:deficit]
+            sampled = sampled_below + sampled_above + take
+        else:
+            sampled = sampled_below + sampled_above
+    else:
+        sampled = sampled_below + sampled_above
+
+    # final shuffle so the sampled list isn't grouped
+    random.shuffle(sampled)
+
+    info.update({
+        "n_returned": len(sampled),
+        "n_below_returned": sum(1 for r in sampled if float(r[-1]) < threshold),
+        "n_above_returned": sum(1 for r in sampled if float(r[-1]) >= threshold),
+    })
+    return sampled, info
 
 #####process
 data = pd.read_csv(name, sep=',', header=0, names=[i for i in range(feature_size)]).values.tolist()
-print("original data type:", type(data))
+data, meta = stratified_age_sample(data, n_total=50, threshold=45, seed=1235, allow_replacement=False)
+print("sampling info:", meta)
+# print("original data:", data[0:2])
+# Convert the sampled data (list of lists) back to a DataFrame
+sampled_df = pd.DataFrame(data)
+
+# Save to CSV
+sampled_df.to_csv("TraIn_test.csv", index=False, header=False)
 # data preprocessing
 data = data_preparation(data)
-print("after preprocess data type:", type(data))
+# print("after preprocess data:", data[0:2])
 
 # random.seed(10086)
 
