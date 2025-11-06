@@ -29,11 +29,12 @@ train.columns = mean_list
 
 test_data = pd.read_csv('./bias_data/ccfraud_test.csv', sep=',', names=[i for i in range(feature_size)])
 test = pd.DataFrame(test_data)
+test = test.head(100)
 test.columns = mean_list # 表格重新写表头
 
 # method结果读取
 # todo 标签需要转换适配各个数据集
-res, index = preres_cc(test.values.tolist(), os.path.join(current_dir, 'chatgpt/flare_ccfraud_desc/flare_ccfraud_desc_write_out_info.json'))
+res, index = preres_cc(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_ccfraud_desc/flare_ccfraud_desc_debias_llm_output.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
 
