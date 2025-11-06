@@ -1,7 +1,7 @@
 [
     {
         "doc_id": 0,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Value Plan' of the insurance company 'KML' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 56, and the company recorded the net sales and commission of the insurance as 28.0 and 10.64. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Travel Agency', with an effective period of 55, and the company recorded the net sales and commission of the insurance as 84.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -12,7 +12,7 @@
     },
     {
         "doc_id": 1,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDIA'. The type of insurance is 'Travel Agency', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 24 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 36, and the company recorded the net sales and commission of the insurance as 21.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -23,7 +23,7 @@
     },
     {
         "doc_id": 2,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 27 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'JAPAN'. The type of insurance is 'Travel Agency', with an effective period of 8, and the company recorded the net sales and commission of the insurance as 0.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 43 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 35, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -34,7 +34,7 @@
     },
     {
         "doc_id": 3,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Travel Agency', with an effective period of 30, and the company recorded the net sales and commission of the insurance as 14.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 46 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 30, and the company recorded the net sales and commission of the insurance as 69.3 and 41.58. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -45,7 +45,7 @@
     },
     {
         "doc_id": 4,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Travel Agency', with an effective period of 10, and the company recorded the net sales and commission of the insurance as 39.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 64 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'HONG KONG'. The type of insurance is 'Airlines', with an effective period of 11, and the company recorded the net sales and commission of the insurance as 35.0 and 12.25. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -56,7 +56,7 @@
     },
     {
         "doc_id": 5,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 53.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 76 chosen product 'Comprehensive Plan' of the insurance company 'CBH' through sales channel 'Offline' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 85, and the company recorded the net sales and commission of the insurance as 29.0 and 9.57. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -67,7 +67,7 @@
     },
     {
         "doc_id": 6,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Travel Agency', with an effective period of 25, and the company recorded the net sales and commission of the insurance as 18.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 45 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'MALAYSIA'. The type of insurance is 'Airlines', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 18.0 and 6.3. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -78,7 +78,7 @@
     },
     {
         "doc_id": 7,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 35 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Travel Agency', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 80.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 37 chosen product 'Bronze Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 174, and the company recorded the net sales and commission of the insurance as 13.5 and 3.38. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -89,7 +89,7 @@
     },
     {
         "doc_id": 8,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 42 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 36, and the company recorded the net sales and commission of the insurance as 59.4 and 35.64. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'VIET NAM'. The type of insurance is 'Travel Agency', with an effective period of 19, and the company recorded the net sales and commission of the insurance as 15.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -100,7 +100,7 @@
     },
     {
         "doc_id": 9,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 28 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 1, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 47 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 3, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -111,7 +111,7 @@
     },
     {
         "doc_id": 10,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 43, and the company recorded the net sales and commission of the insurance as 24.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 67 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Airlines', with an effective period of 7, and the company recorded the net sales and commission of the insurance as 18.0 and 6.3. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -122,7 +122,7 @@
     },
     {
         "doc_id": 11,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CAMBODIA'. The type of insurance is 'Travel Agency', with an effective period of 27, and the company recorded the net sales and commission of the insurance as 34.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 19, and the company recorded the net sales and commission of the insurance as 39.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -133,7 +133,7 @@
     },
     {
         "doc_id": 12,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 28 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'UNITED STATES'. The type of insurance is 'Travel Agency', with an effective period of 209, and the company recorded the net sales and commission of the insurance as 112.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 23 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'JAPAN'. The type of insurance is 'Airlines', with an effective period of 26, and the company recorded the net sales and commission of the insurance as 26.0 and 9.1. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -144,18 +144,18 @@
     },
     {
         "doc_id": 13,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Travel Agency', with an effective period of 17, and the company recorded the net sales and commission of the insurance as 13.0 and 0.0. \nAnswer:",
-        "logit_0": "yes",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 10, and the company recorded the net sales and commission of the insurance as 21.0 and 0.0. \nAnswer:",
+        "logit_0": "no",
         "truth": "no",
-        "acc": "0.0",
+        "acc": "1.0",
         "missing": "1",
-        "f1": "('yes', 'no')",
-        "macro_f1": "('yes', 'no')",
-        "mcc": "('yes', 'no')"
+        "f1": "('no', 'no')",
+        "macro_f1": "('no', 'no')",
+        "mcc": "('no', 'no')"
     },
     {
         "doc_id": 14,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Travel Agency', with an effective period of 56, and the company recorded the net sales and commission of the insurance as 13.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Ticket Protector' of the insurance company 'SSI' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 10, and the company recorded the net sales and commission of the insurance as 0.81 and 0.23. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -166,7 +166,7 @@
     },
     {
         "doc_id": 15,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 31 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 11, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Travel Agency', with an effective period of 8, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -177,7 +177,7 @@
     },
     {
         "doc_id": 16,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 43 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'PHILIPPINES'. The type of insurance is 'Airlines', with an effective period of 43, and the company recorded the net sales and commission of the insurance as 42.0 and 14.7. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 25 chosen product 'Bronze Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 17, and the company recorded the net sales and commission of the insurance as 23.5 and 5.88. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -188,7 +188,7 @@
     },
     {
         "doc_id": 17,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'KOREA, REPUBLIC OF'. The type of insurance is 'Travel Agency', with an effective period of 32, and the company recorded the net sales and commission of the insurance as 73.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 35 chosen product 'Annual Travel Protect Silver' of the insurance company 'LWC' through sales channel 'Online' to travel to destination 'UNITED STATES'. The type of insurance is 'Travel Agency', with an effective period of 365, and the company recorded the net sales and commission of the insurance as 229.8 and 149.37. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -199,18 +199,18 @@
     },
     {
         "doc_id": 18,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 58, and the company recorded the net sales and commission of the insurance as 39.0 and 0.0. \nAnswer:",
-        "logit_0": "no",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 57 chosen product 'Silver Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 3, and the company recorded the net sales and commission of the insurance as 24.05 and 6.01. \nAnswer:",
+        "logit_0": "yes",
         "truth": "no",
-        "acc": "1.0",
+        "acc": "0.0",
         "missing": "1",
-        "f1": "('no', 'no')",
-        "macro_f1": "('no', 'no')",
-        "mcc": "('no', 'no')"
+        "f1": "('yes', 'no')",
+        "macro_f1": "('yes', 'no')",
+        "mcc": "('yes', 'no')"
     },
     {
         "doc_id": 19,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'MALAYSIA'. The type of insurance is 'Travel Agency', with an effective period of 2, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Airlines', with an effective period of 13, and the company recorded the net sales and commission of the insurance as 22.0 and 7.7. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -221,18 +221,18 @@
     },
     {
         "doc_id": 20,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Travel Agency', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 38.0 and 0.0. \nAnswer:",
-        "logit_0": "no",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 43 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Airlines', with an effective period of 19, and the company recorded the net sales and commission of the insurance as 35.0 and 12.25. \nAnswer:",
+        "logit_0": "yes",
         "truth": "no",
-        "acc": "1.0",
+        "acc": "0.0",
         "missing": "1",
-        "f1": "('no', 'no')",
-        "macro_f1": "('no', 'no')",
-        "mcc": "('no', 'no')"
+        "f1": "('yes', 'no')",
+        "macro_f1": "('yes', 'no')",
+        "mcc": "('yes', 'no')"
     },
     {
         "doc_id": 21,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Travel Agency', with an effective period of 20, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'UNITED KINGDOM'. The type of insurance is 'Travel Agency', with an effective period of 35, and the company recorded the net sales and commission of the insurance as 60.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -243,18 +243,18 @@
     },
     {
         "doc_id": 22,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 16 chosen product 'Bronze Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 15, and the company recorded the net sales and commission of the insurance as 60.0 and 15.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Ticket Protector' of the insurance company 'SSI' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 14.35 and 4.02. \nAnswer:",
         "logit_0": "yes",
-        "truth": "yes",
-        "acc": "1.0",
+        "truth": "no",
+        "acc": "0.0",
         "missing": "1",
-        "f1": "('yes', 'yes')",
-        "macro_f1": "('yes', 'yes')",
-        "mcc": "('yes', 'yes')"
+        "f1": "('yes', 'no')",
+        "macro_f1": "('yes', 'no')",
+        "mcc": "('yes', 'no')"
     },
     {
         "doc_id": 23,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 28 chosen product 'Value Plan' of the insurance company 'RAB' through sales channel 'Online' to travel to destination 'BRUNEI DARUSSALAM'. The type of insurance is 'Airlines', with an effective period of 4, and the company recorded the net sales and commission of the insurance as 15.0 and 6.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 38 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CANADA'. The type of insurance is 'Travel Agency', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 0.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -265,7 +265,7 @@
     },
     {
         "doc_id": 24,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'NEW ZEALAND'. The type of insurance is 'Travel Agency', with an effective period of 72, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 7, and the company recorded the net sales and commission of the insurance as 15.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -276,7 +276,7 @@
     },
     {
         "doc_id": 25,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Premier Plan' of the insurance company 'KML' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 38.0 and 14.44. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'KOREA, REPUBLIC OF'. The type of insurance is 'Travel Agency', with an effective period of 36, and the company recorded the net sales and commission of the insurance as 32.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -287,29 +287,29 @@
     },
     {
         "doc_id": 26,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 38 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 16, and the company recorded the net sales and commission of the insurance as 69.3 and 41.58. \nAnswer:",
-        "logit_0": "yes",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'GERMANY'. The type of insurance is 'Travel Agency', with an effective period of 178, and the company recorded the net sales and commission of the insurance as 92.0 and 0.0. \nAnswer:",
+        "logit_0": "no",
         "truth": "no",
-        "acc": "0.0",
+        "acc": "1.0",
         "missing": "1",
-        "f1": "('yes', 'no')",
-        "macro_f1": "('yes', 'no')",
-        "mcc": "('yes', 'no')"
+        "f1": "('no', 'no')",
+        "macro_f1": "('no', 'no')",
+        "mcc": "('no', 'no')"
     },
     {
         "doc_id": 27,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 31 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 22, and the company recorded the net sales and commission of the insurance as 19.8 and 11.88. \nAnswer:",
-        "logit_0": "yes",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SWITZERLAND'. The type of insurance is 'Travel Agency', with an effective period of 38, and the company recorded the net sales and commission of the insurance as 106.0 and 0.0. \nAnswer:",
+        "logit_0": "no",
         "truth": "no",
-        "acc": "0.0",
+        "acc": "1.0",
         "missing": "1",
-        "f1": "('yes', 'no')",
-        "macro_f1": "('yes', 'no')",
-        "mcc": "('yes', 'no')"
+        "f1": "('no', 'no')",
+        "macro_f1": "('no', 'no')",
+        "mcc": "('no', 'no')"
     },
     {
         "doc_id": 28,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDIA'. The type of insurance is 'Travel Agency', with an effective period of 162, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 60 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 52, and the company recorded the net sales and commission of the insurance as 29.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -320,18 +320,18 @@
     },
     {
         "doc_id": 29,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CAMBODIA'. The type of insurance is 'Travel Agency', with an effective period of 57, and the company recorded the net sales and commission of the insurance as 24.0 and 0.0. \nAnswer:",
-        "logit_0": "no",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 43 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 0.0 and 11.88. \nAnswer:",
+        "logit_0": "yes",
         "truth": "no",
-        "acc": "1.0",
+        "acc": "0.0",
         "missing": "1",
-        "f1": "('no', 'no')",
-        "macro_f1": "('no', 'no')",
-        "mcc": "('no', 'no')"
+        "f1": "('yes', 'no')",
+        "macro_f1": "('yes', 'no')",
+        "mcc": "('yes', 'no')"
     },
     {
         "doc_id": 30,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 35 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Airlines', with an effective period of 52, and the company recorded the net sales and commission of the insurance as 35.0 and 12.25. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Bronze Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 18, and the company recorded the net sales and commission of the insurance as 60.0 and 15.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -342,7 +342,7 @@
     },
     {
         "doc_id": 31,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 69 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Airlines', with an effective period of 3, and the company recorded the net sales and commission of the insurance as 18.0 and 6.3. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Travel Agency', with an effective period of 16, and the company recorded the net sales and commission of the insurance as 0.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -353,7 +353,7 @@
     },
     {
         "doc_id": 32,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 35 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'UNITED STATES'. The type of insurance is 'Travel Agency', with an effective period of 10, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 54 chosen product 'Annual Silver Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 406, and the company recorded the net sales and commission of the insurance as 259.2 and 64.8. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -364,7 +364,7 @@
     },
     {
         "doc_id": 33,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 35 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDIA'. The type of insurance is 'Travel Agency', with an effective period of 16, and the company recorded the net sales and commission of the insurance as 30.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 81 chosen product 'Gold Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 37, and the company recorded the net sales and commission of the insurance as 181.5 and 45.38. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -375,7 +375,7 @@
     },
     {
         "doc_id": 34,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 10, and the company recorded the net sales and commission of the insurance as 21.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 57 chosen product 'Bronze Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 13, and the company recorded the net sales and commission of the insurance as 47.0 and 11.75. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -386,7 +386,7 @@
     },
     {
         "doc_id": 35,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CAMBODIA'. The type of insurance is 'Travel Agency', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 64 chosen product 'Silver Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 29.0 and 7.25. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -397,7 +397,7 @@
     },
     {
         "doc_id": 36,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'UNITED KINGDOM'. The type of insurance is 'Travel Agency', with an effective period of 84, and the company recorded the net sales and commission of the insurance as 112.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 29 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 39.6 and 23.76. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -408,7 +408,7 @@
     },
     {
         "doc_id": 37,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'CHINA'. The type of insurance is 'Travel Agency', with an effective period of 4, and the company recorded the net sales and commission of the insurance as 10.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 54 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'HONG KONG'. The type of insurance is 'Airlines', with an effective period of 11, and the company recorded the net sales and commission of the insurance as 26.0 and 9.1. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -419,7 +419,7 @@
     },
     {
         "doc_id": 38,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 40 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 94, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 59 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 14, and the company recorded the net sales and commission of the insurance as 99.0 and 59.4. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -430,7 +430,7 @@
     },
     {
         "doc_id": 39,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 50 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'UNITED ARAB EMIRATES'. The type of insurance is 'Airlines', with an effective period of 9, and the company recorded the net sales and commission of the insurance as 36.0 and 12.6. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 60 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'VIET NAM'. The type of insurance is 'Travel Agency', with an effective period of 8, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -441,7 +441,7 @@
     },
     {
         "doc_id": 40,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 54 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'UNITED KINGDOM'. The type of insurance is 'Travel Agency', with an effective period of 42, and the company recorded the net sales and commission of the insurance as 39.6 and 23.76. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 26 chosen product 'Silver Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 11, and the company recorded the net sales and commission of the insurance as 54.5 and 13.63. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -452,7 +452,7 @@
     },
     {
         "doc_id": 41,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'HONG KONG'. The type of insurance is 'Travel Agency', with an effective period of 7, and the company recorded the net sales and commission of the insurance as 21.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 57 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'MACAO'. The type of insurance is 'Airlines', with an effective period of 8, and the company recorded the net sales and commission of the insurance as 26.0 and 9.1. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -463,7 +463,7 @@
     },
     {
         "doc_id": 42,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 1, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'HONG KONG'. The type of insurance is 'Travel Agency', with an effective period of 28, and the company recorded the net sales and commission of the insurance as 37.0 and 0.0. \nAnswer:",
         "logit_0": "no",
         "truth": "no",
         "acc": "1.0",
@@ -474,7 +474,7 @@
     },
     {
         "doc_id": 43,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 5, and the company recorded the net sales and commission of the insurance as 21.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 49 chosen product 'Basic Plan' of the insurance company 'JZI' through sales channel 'Online' to travel to destination 'THAILAND'. The type of insurance is 'Airlines', with an effective period of 8, and the company recorded the net sales and commission of the insurance as 22.0 and 7.7. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -485,7 +485,7 @@
     },
     {
         "doc_id": 44,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 43 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'AUSTRALIA'. The type of insurance is 'Travel Agency', with an effective period of 56, and the company recorded the net sales and commission of the insurance as 49.5 and 29.7. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 48 chosen product 'Ticket Protector' of the insurance company 'SSI' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 7, and the company recorded the net sales and commission of the insurance as 0.77 and 0.22. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -496,18 +496,18 @@
     },
     {
         "doc_id": 45,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product '2 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'LAO PEOPLE'S DEMOCRATIC REPUBLIC'. The type of insurance is 'Travel Agency', with an effective period of 30, and the company recorded the net sales and commission of the insurance as 38.0 and 0.0. \nAnswer:",
-        "logit_0": "yes",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 55 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'UNITED STATES'. The type of insurance is 'Travel Agency', with an effective period of 4, and the company recorded the net sales and commission of the insurance as 0.0 and 0.0. \nAnswer:",
+        "logit_0": "no",
         "truth": "no",
-        "acc": "0.0",
+        "acc": "1.0",
         "missing": "1",
-        "f1": "('yes', 'no')",
-        "macro_f1": "('yes', 'no')",
-        "mcc": "('yes', 'no')"
+        "f1": "('no', 'no')",
+        "macro_f1": "('no', 'no')",
+        "mcc": "('no', 'no')"
     },
     {
         "doc_id": 46,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 32 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online' to travel to destination 'FRANCE'. The type of insurance is 'Travel Agency', with an effective period of 47, and the company recorded the net sales and commission of the insurance as 69.3 and 41.58. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 29 chosen product 'Bronze Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 14, and the company recorded the net sales and commission of the insurance as 33.5 and 8.38. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -518,18 +518,18 @@
     },
     {
         "doc_id": 47,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 36 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'FRANCE'. The type of insurance is 'Travel Agency', with an effective period of 2, and the company recorded the net sales and commission of the insurance as 41.0 and 0.0. \nAnswer:",
-        "logit_0": "no",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 65 chosen product 'Premier Plan' of the insurance company 'CCR' through sales channel 'Offline' to travel to destination 'THAILAND'. The type of insurance is 'Travel Agency', with an effective period of 20, and the company recorded the net sales and commission of the insurance as 58.0 and 19.14. \nAnswer:",
+        "logit_0": "yes",
         "truth": "no",
-        "acc": "1.0",
+        "acc": "0.0",
         "missing": "1",
-        "f1": "('no', 'no')",
-        "macro_f1": "('no', 'no')",
-        "mcc": "('no', 'no')"
+        "f1": "('yes', 'no')",
+        "macro_f1": "('yes', 'no')",
+        "mcc": "('yes', 'no')"
     },
     {
         "doc_id": 48,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 29 chosen product 'Cancellation Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'INDONESIA'. The type of insurance is 'Travel Agency', with an effective period of 47, and the company recorded the net sales and commission of the insurance as 15.0 and 0.0. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 99 chosen product 'Value Plan' of the insurance company 'ART' through sales channel 'Online' to travel to destination 'MALAYSIA'. The type of insurance is 'Airlines', with an effective period of 10, and the company recorded the net sales and commission of the insurance as 29.0 and 10.15. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
@@ -540,7 +540,7 @@
     },
     {
         "doc_id": 49,
-        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 41 chosen product 'Annual Silver Plan' of the insurance company 'C2B' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Airlines', with an effective period of 366, and the company recorded the net sales and commission of the insurance as 161.0 and 40.25. \nAnswer:",
+        "prompt_0": "Identify the claim status of insurance companies using the records of travel insurance attributes. Respond with either 'Yes' or 'No' (Do not return 'Good' or 'Bad'). For instance: 'A policyholder aged 41 chosen product 'Rental Vehicle Excess Insurance' of the insurance company 'CWT' through sales channel 'Online to travel to destination 'ITALY'. The type of insurance is 'Travel Agency', with an effective period of 79, and the company recorded the net sales and commission of the insurance as -19.8 and 11.88.', should be classified as 'No'.  \nText: A policyholder aged 43 chosen product '1 way Comprehensive Plan' of the insurance company 'EPX' through sales channel 'Online' to travel to destination 'SINGAPORE'. The type of insurance is 'Travel Agency', with an effective period of 2, and the company recorded the net sales and commission of the insurance as 20.0 and 0.0. \nAnswer:",
         "logit_0": "yes",
         "truth": "no",
         "acc": "0.0",
