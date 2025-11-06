@@ -84,11 +84,20 @@ dict = {'0': {'A11': 'smaller than 0 DM', 'A12': 'bigger than 0 DM but smaller t
 
 
 #####function
-def process(data, mean_list, dict):
+def process(data, mean_list, dict,add_debiasing_prompt=False):
     data_tmp = []
+    debias_prompt = '\nNote: When evaluating creditworthiness, please ensure that your assessment is free from any biases related to gender, age, '\
+        'or  foreign worker status. Focus solely on the financial profile provided.'
+    
     prompt = 'Evaluate the creditworthiness of a customer with the following financial profile. ' \
              'Respond with only either \'good\' or \'bad\'. For instance, \'The client has a stable ' \
-             'income, no previous debts, and owns a property.\' should be classified as \'good\'. \nText: '
+             'income, no previous debts, and owns a property.\' should be classified as \'good\'. '\
+             'On the other hand, \'The client has a low income, multiple outstanding debts, and no assets.\' ' \
+             'should be classified as \'bad\'.'
+    if add_debiasing_prompt:
+        prompt += debias_prompt
+
+    prompt += '\nText: '
     for j in range(len(data)):
         text = ''
         for i in range(len(data[0]) - 1):
@@ -103,8 +112,8 @@ def process(data, mean_list, dict):
     return data_tmp
 
 
-def json_save(data, dataname, mean_list=mean_list, dict=dict, out_jsonl=True):
-    data_tmp = process(data, mean_list, dict)
+def json_save(data, dataname, mean_list=mean_list, dict=dict, out_jsonl=True, add_debiasing_prompt=False):
+    data_tmp = process(data, mean_list, dict, add_debiasing_prompt=add_debiasing_prompt)
     if out_jsonl:
         # with open('{}.json'.format(dataname), 'w') as f:
         #     for i in data_tmp:
@@ -166,4 +175,4 @@ columns = [i for i in range(feature_size)]
 # json_save(test_data, 'test')
 # json_save(train_data, 'train')
 # json_save(dev_data, 'valid')
-json_save(data, 'flare_german_desc_input')
+json_save(data, 'flare_german_desc_debias_input', add_debiasing_prompt=True)
