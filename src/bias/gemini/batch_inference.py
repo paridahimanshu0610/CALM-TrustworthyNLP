@@ -80,7 +80,7 @@ for i, entry in enumerate(entries, 1):
             break
         except Exception as e:
             print(f"Error on attempt {attempt+1} for entry {i}: {e}")
-            time.sleep(2)  # wait before retry
+            time.sleep(61)  # wait before retry
 
     if not success:
         model_output = ""  # fallback for failed requests
@@ -94,7 +94,7 @@ for i, entry in enumerate(entries, 1):
     results.append(temp)
 
     print(f"Processed entry {i}/{len(entries)}")
-    time.sleep(6)  # <-- ensures <10 requests per minute
+    time.sleep(10)  # <-- ensures <6 requests per minute
 
 # ---------- Save ----------
 with open(output_path, "w", encoding="utf-8") as f:
