@@ -27,14 +27,14 @@ train_data = predo_tra(train_data)
 train = pd.DataFrame(train_data)
 train.columns = mean_list
 
-test_data = pd.read_csv('./bias_data/TraIn_test.csv', sep=',', names=[i for i in range(feature_size)])
+test_data = pd.read_csv('./gemini/flare_trin_desc/TraIn_test.csv', sep=',', names=[i for i in range(feature_size)])
 test_data = predo_tra(test_data)
 test = pd.DataFrame(test_data)
 test.columns = mean_list # 表格重新写表头
 
 # method结果读取
 # todo 标签需要转换适配各个数据集
-res = preres_tra(test.values.tolist(), os.path.join(current_dir, 'chatgpt/flare_trin_desc/flare_trin_desc_write_out_info.json'))
+res = preres_tra(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_trin_desc/flare_trin_desc_debias_llm_output.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
 
