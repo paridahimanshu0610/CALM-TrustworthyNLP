@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import numpy as np
 import os
+from sklearn.utils import resample
 
 # todo use
 #####config
@@ -153,9 +154,69 @@ def save_bias_data(test_data, train_data, columns):
     ss2_data = pd.DataFrame(train_data, columns=columns)
     ss2_data.to_csv('bias_data/german_train.csv', index=False)
 
+def balanced_sample(df, group_cols, n_total=50, random_state=42):
+    """
+    Returns a balanced sample of n_total rows from df, stratified by group_cols.
+    If some groups have fewer samples than needed, all available samples are used.
+    """
+
+    # Ensure df is a DataFrame (in case it's a numpy array)
+    if not isinstance(df, pd.DataFrame):
+        df = pd.DataFrame(df)
+
+    grouped = df.groupby(group_cols)
+    n_groups = grouped.ngroups
+    n_per_group = max(1, n_total // n_groups)
+
+    # Sample evenly from each group
+    samples = grouped.apply(
+        lambda g: g.sample(
+            n=min(len(g), n_per_group),
+            random_state=random_state
+        )
+    ).reset_index(drop=True)
+
+    # If total < n_total, top up randomly from remaining rows
+    if len(samples) < n_total:
+        remaining = n_total - len(samples)
+        extras = df.drop(samples.index, errors="ignore").sample(
+            n=remaining,
+            random_state=random_state,
+            replace=len(df) < remaining
+        )
+        samples = pd.concat([samples, extras], ignore_index=True)
+
+    # Shuffle before returning
+    return samples.sample(frac=1, random_state=random_state).reset_index(drop=True)
+
 
 #####process
-data = pd.read_csv(name, sep=',', names=[i for i in range(feature_size)]).values.tolist()
+data = pd.read_csv(name, sep=',', names=[i for i in range(feature_size)])
+
+####################
+# Assume test_data is your DataFrame
+# group_cols = [8, 19]
+
+# groups = [g for _, g in data.groupby(group_cols)]
+
+# # Find the largest group size
+# max_size = max(len(g) for g in groups)
+# print(f"Largest group size: {max_size}")
+
+# # Upsample smaller groups to match the largest
+# data = pd.concat([
+#     resample(g, replace=True, n_samples=max_size, random_state=42)
+#     for g in groups
+# ])
+
+# # Shuffle and reset index
+# data = data.sample(frac=1, random_state=42).reset_index(drop=True)
+
+# print("Balanced group counts:")
+# print(data.groupby(group_cols).size())
+####################
+
+data = data.values.tolist()
 # check = get_num(data)
 # random.seed(10086)
 
@@ -169,7 +230,7 @@ data = pd.read_csv(name, sep=',', names=[i for i in range(feature_size)]).values
 # index_left = list(filter(lambda x: x not in train_ind + dev__ind, [i for i in range(len(data))]))
 # test_data = [data[i] for i in index_left]
 
-columns = [i for i in range(feature_size)]
+# columns = [i for i in range(feature_size)]
 # save_bias_data(test_data, train_data, columns)
 
 # json_save(test_data, 'test')
