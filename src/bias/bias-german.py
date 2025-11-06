@@ -24,7 +24,7 @@ if train_size + dev_size + test_size != 1:
 mean_list = ['Status of existing checking account', 'Duration in month', 'Credit history', 'Purpose',
              'Credit amount', 'Savings account/bonds', 'Present employment since',
              'Installment rate in percentage of disposable income', 'Personal status and sex',
-             ' Other debtors / guarantors', 'Present residence since', 'Property', 'Age in years',
+             'Other debtors / guarantors', 'Present residence since', 'Property', 'Age in years',
              'Other installment plans', 'Housing', 'Number of existing credits at this bank' ,'Job',
              'Number of people being liable to provide maintenance for' , 'Telephone' , 'foreign worker',
              'target']
@@ -43,6 +43,7 @@ train.columns = mean_list
 test_data = pd.read_csv('./bias_data/german_test.csv', sep=',', names=[i for i in range(feature_size)])
 test_data = predo(test_data)
 test = pd.DataFrame(test_data)
+# test = test.head(50)
 test.columns = mean_list # 表格重新写表头
 
 # method结果读取
@@ -51,6 +52,7 @@ test.columns = mean_list # 表格重新写表头
 res = preres(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_german_desc/flare_german_desc_llm_output.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
+print("Length of the result data:", len(res))
 
 '''data bias test'''
 # 测试数据本身偏见性
