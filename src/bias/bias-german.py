@@ -49,7 +49,7 @@ test.columns = mean_list # 表格重新写表头
 # method结果读取
 # todo 标签需要转换适配各个数据集
 # 'chatgpt/flare_german_desc/flare_german_desc_write_out_info.json'
-res = preres(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_german_desc/flare_german_desc_llm_output.json'))
+res = preres(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_german_desc/flare_german_desc_debias_llm_output.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
 print("Length of the result data:", len(res))

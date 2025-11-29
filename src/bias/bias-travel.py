@@ -34,7 +34,7 @@ test.columns = mean_list # 表格重新写表头
 
 # method结果读取
 # todo 标签需要转换适配各个数据集
-res = preres_tra(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_trin_desc/flare_trin_desc_debias_llm_output.json'))
+res = preres_tra(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_trin_desc/flare_trin_desc_llm_output.json'))
 res = pd.DataFrame(res)
 res.columns = mean_list
 

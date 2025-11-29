@@ -21,8 +21,8 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 
 # ---------- File paths ----------
 current_dir = os.path.dirname(os.path.abspath(__file__))
-input_path = os.path.join(current_dir, 'flare_german_desc', "flare_german_desc_input.json")
-output_path = os.path.join(current_dir, 'flare_german_desc', "flare_german_desc_llm_output.json")
+input_path = os.path.join(current_dir, 'flare_german_desc', "flare_german_desc_debias_input.json")
+output_path = os.path.join(current_dir, 'flare_german_desc', "flare_german_desc_debias_llm_output.json")
 
 # ---------- Load JSON ----------
 with open(input_path, "r", encoding="utf-8") as f:
