@@ -3,16 +3,23 @@ import random
 import numpy as np
 import pandas as pd
 import json
+import math
+import os
 
 #####config
 from sklearn.model_selection import train_test_split
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
 
 name = "creditcard.csv"
 feature_size = 29 + 1  # Target_index = -1
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
 
-if train_size + dev_size + test_size != 1:
+if not math.isclose(train_size + dev_size + test_size, 1.0):
     print("sample size wrong!!!")
+
+os.makedirs('gpt4-data', exist_ok=True)
 
 mean_list = [f'V{i}' for i in range(1, feature_size - 1)]
 mean_list.append('Amount')
@@ -61,7 +68,7 @@ def process_table(data, mean_list):
     return data_tmp
 
 
-def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
+def json_save(data, dataname, mean_list=mean_list, out_jsonl=True):
     data_tmp = process_table(data, mean_list)
     if out_jsonl:
         with open('{}.jsonl'.format(dataname), 'w') as f:
@@ -71,10 +78,10 @@ def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
             print('-----------')
             print(f"{dataname}.jsonl write done")
         f.close()
-    df = pd.DataFrame(data_tmp)
-    # 保存为 Parquet 文件
-    parquet_file_path = f'data/{dataname}.parquet'
-    df.to_parquet(parquet_file_path, index=False)
+    # df = pd.DataFrame(data_tmp)
+    # # 保存为 Parquet 文件
+    # parquet_file_path = f'data/{dataname}.parquet'
+    # df.to_parquet(parquet_file_path, index=False)
     return data_tmp
 
 
@@ -89,18 +96,10 @@ def json_save_gpt4(data, dataname, mean_list=mean_list):
     f.close()
 
 
-def get_num(data):
-    data_con = np.array(data)
-    check = np.unique(data_con[:, -1])
-    check1 = (data_con[:, -1] == check[0]).sum()
-    check2 = (data_con[:, -1] == check[1]).sum()
-    return check1, check2
-
-
 def save_gpt4_data(test_data):
     tmp_data2 = [row for row in test_data if row[-1] == 0]
     tmp_data1 = [row for row in test_data if row[-1] == 1]
-    gpt4_data = tmp_data1 + tmp_data2[:100 - len(tmp_data1)]
+    gpt4_data = tmp_data1 + tmp_data2[:max(0, 100 - len(tmp_data1))]
 
     s_data = pd.DataFrame(gpt4_data)
     np.random.seed(42)
@@ -111,13 +110,11 @@ def save_gpt4_data(test_data):
 
 
 #####process
-
 data = pd.read_csv(name, sep=',', header=0, names=[i for i in range(feature_size + 1)]).drop(0, axis=1)  # Time dropped
-save_data, drop_data = train_test_split(data, test_size=0.96, stratify=data[30], random_state=100)
-# data = data.sample(n=int(len(data) * 0.1), random_state=42).values.tolist()
+# readme: 28,480 / 284,807 (10%) -> keep 10% as the working set
+save_data, drop_data = train_test_split(data, test_size=0.90, stratify=data[30], random_state=100)
 data = save_data.values.tolist()
 
-che = get_num(data)
 data = data_split(data)
 save_gpt4_data(data[2])
 

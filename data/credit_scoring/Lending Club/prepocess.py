@@ -3,16 +3,24 @@ import random
 import numpy as np
 import pandas as pd
 import json
+import math
+import os
 
 #####config
 from sklearn.model_selection import train_test_split
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
 
 name = "accepted_2007_to_2018Q4.csv"
 feature_size = 21 + 1  # Target_index = -1
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
 
-if train_size + dev_size + test_size != 1:
+if not math.isclose(train_size + dev_size + test_size, 1.0):
     print("sample size wrong!!!")
+
+os.makedirs('gpt4-data', exist_ok=True)
+# os.makedirs('data', exist_ok=True)  # only needed if parquet output is re-enabled
 
 mean_list = ['Installment', 'Loan Purpose', 'Loan Application Type', 'Interest Rate', 'Last Payment Amount',
              'Loan Amount', 'Revolving Balance',
@@ -40,14 +48,14 @@ def process_table(data, mean_list):
                 text = text + f'The state of {mean_list[i]} is {str(data[j][i])}' + sp
         answer = 'good' if data[j][-1] == 'Fully Paid' else 'bad'
         gold = 0 if data[j][-1] == 'Fully Paid' else 1
-        # 'Fully Paid' is good and 'Charged off' is bad
+        # 'Fully Paid' is good and 'Charged Off' is bad
         data_tmp.append(
             {'id': j, "query": f"{prompt}'{text}'" + ' \nAnswer:', 'answer': answer, "choices": ["good", "bad"],
              "gold": gold, 'text': text})
     return data_tmp
 
 
-def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
+def json_save(data, dataname, mean_list=mean_list, out_jsonl=True):
     data_tmp = process_table(data, mean_list)
     if out_jsonl:
         with open('{}.jsonl'.format(dataname), 'w') as f:
@@ -57,10 +65,10 @@ def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
             print('-----------')
             print(f"{dataname}.jsonl write done")
         f.close()
-    df = pd.DataFrame(data_tmp)
+    # df = pd.DataFrame(data_tmp)
     # 保存为 Parquet 文件
-    parquet_file_path = f'data/{dataname}.parquet'
-    df.to_parquet(parquet_file_path, index=False)
+    # parquet_file_path = f'data/{dataname}.parquet'
+    # df.to_parquet(parquet_file_path, index=False)
     return data_tmp
 
 
@@ -95,13 +103,17 @@ def get_data(name):
         if loan_st != 'Fully Paid' and loan_st != 'Charged Off':
             data = data.drop(data[data['loan_status'] == loan_st].index)
     data.dropna(subset=['loan_status'], inplace=True)
+    # int_rate / revol_util can arrive as strings with a trailing '%' (e.g. "13.99%") depending on the
+    # source export; strip it and cast to float so downstream text generation doesn't risk a double '%'.
+    for pct_col in ['int_rate', 'revol_util']:
+        if data[pct_col].dtype == object:
+            data[pct_col] = data[pct_col].astype(str).str.rstrip('%').astype(float)
     save_data, drop_data = train_test_split(data, test_size=0.99, stratify=data['loan_status'], random_state=100)
     return save_data
 
 
 def save_gpt4_data(test_data):
-    tmp_data = [test_data[-1] for row in test_data]
-    #  test_data[-1] 这里该是row[-1],但无所谓，这里巧合的是，取出的分布差不多： 正类 99(bad) / 500  正确的应该是 96 / 500
+    tmp_data = [row[-1] for row in test_data]
     _, gpt4_data = train_test_split(test_data, test_size=500, stratify=tmp_data, random_state=100)
     # gpt4_data.to_csv('gpt4_rawdata', index=False)
     json_save_gpt4(gpt4_data, 'test_gpt4')
@@ -109,7 +121,6 @@ def save_gpt4_data(test_data):
 
 #####process
 data = get_data(name).values.tolist()
-check_num = get_num(data)
 random.seed(10086)
 
 train_ind = random.sample([i for i in range(len(data))], int(len(data) * train_size))

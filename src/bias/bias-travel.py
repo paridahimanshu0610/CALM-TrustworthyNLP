@@ -6,7 +6,7 @@ from aif360.datasets import BinaryLabelDataset
 from aif360.explainers import MetricTextExplainer
 import random
 import json
-from process import predo_tra, preres_tra
+from process import predo_tra, preres_tra, compute_metrics
 import os 
 
 '''data preprocess'''
@@ -22,62 +22,108 @@ feature_size = 10
 current_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(current_dir)
 
-train_data = pd.read_csv('./bias_data/TraIn_train.csv', sep=',', names=[i for i in range(feature_size)])
-train_data = predo_tra(train_data)
-train = pd.DataFrame(train_data)
-train.columns = mean_list
+# train_data = pd.read_csv('./bias_data/TraIn_train.csv', sep=',', names=[i for i in range(feature_size)])
+# train_data = predo_tra(train_data)
+# train = pd.DataFrame(train_data)
+# train.columns = mean_list
 
-test_data = pd.read_csv('./gemini/flare_trin_desc/TraIn_test.csv', sep=',', names=[i for i in range(feature_size)])
-test_data = predo_tra(test_data)
-test = pd.DataFrame(test_data)
-test.columns = mean_list # 表格重新写表头
+# test_data = pd.read_csv('./bias_data/TraIn_test.csv', sep=',', names=[i for i in range(feature_size)])
+# test_data = predo_tra(test_data)
+# test = pd.DataFrame(test_data)
+# test.columns = mean_list # 表格重新写表头
+
+def prepare_input_data(filename):
+    input_data = pd.read_csv(filename, sep=',', names=[i for i in range(feature_size)])
+    input_data = predo_tra(input_data)
+    input_data_df = pd.DataFrame(input_data)
+    input_data_df.columns = mean_list
+    return input_data_df   
+
+def prepare_output_data(output_filename, test_data_df):
+    output_data = preres_tra(test_data_df.values.tolist(), output_filename)
+    output_data_df = pd.DataFrame(output_data)
+    output_data_df.columns = mean_list
+    return output_data_df    
+
+train = prepare_input_data(os.path.join(current_dir, 'bias_data', 'TraIn_train.csv'))
+test = prepare_input_data(os.path.join(current_dir, 'bias_data', 'TraIn_test.csv'))
+res = prepare_output_data(os.path.join(current_dir, 'CALM', 'flare_trin_desc_write_out_info.json'), test)
+
+def disparate_impact(input_df):
+    input_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=input_df, label_names=['target'], protected_attribute_names=['Age'])
+    final_res = dict()
+    
+    # Gender DI
+    metric = BinaryLabelDatasetMetric(input_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
+    # text_res = MetricTextExplainer(metric)        
+    final_res['Age'] = metric.disparate_impact()
+
+    return final_res
+
+def bias_test(output_df, input_test_df):
+    llm_output_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=output_df, label_names=['target'], protected_attribute_names=['Age'])
+    input_test_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=input_test_df, label_names=['target'], protected_attribute_names=['Age'])
+    final_res = {'EOD': {}, "AOD": {}}
+    
+    # Gender EOD and AOD
+    metric = ClassificationMetric(input_test_data, llm_output_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
+    # text_res = MetricTextExplainer(metric)        
+    final_res['EOD']["Age"] = metric.equal_opportunity_difference()
+    final_res['AOD']["Age"] = metric.average_odds_difference()
+
+    return final_res
+
+print("Train DI:", disparate_impact(train))
+print("Test DI:", disparate_impact(test))
+print("Bias Test:", bias_test(res, test))
+print("Results:", compute_metrics(os.path.join(current_dir, 'CALM', 'flare_trin_desc_write_out_info.json'), positive_choice='yes'))
 
 # method结果读取
 # todo 标签需要转换适配各个数据集
-res = preres_tra(test.values.tolist(), os.path.join(current_dir, 'gemini/flare_trin_desc/flare_trin_desc_llm_output.json'))
-res = pd.DataFrame(res)
-res.columns = mean_list
+# res = preres_tra(test.values.tolist(), os.path.join(current_dir, 'CALM', 'flare_trin_desc_write_out_info.json'))
+# res = pd.DataFrame(res)
+# res.columns = mean_list
 
-'''data bias test'''
-# 测试数据本身偏见性
-# favorable_label 为好的数值，即无风险的代表数字
-# unfavorable_label 为坏的数值
-# df 为数据
-# label_names 作为目标的变量名
-# protected_attribute_names 需要保护的变量名，含偏见的变量名
-test_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=test, label_names=['target'], protected_attribute_names=['Age'])
+# '''data bias test'''
+# # 测试数据本身偏见性
+# # favorable_label 为好的数值，即无风险的代表数字
+# # unfavorable_label 为坏的数值
+# # df 为数据
+# # label_names 作为目标的变量名
+# # protected_attribute_names 需要保护的变量名，含偏见的变量名
+# test_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=test, label_names=['target'], protected_attribute_names=['Age'])
 
-# unprivileged_groups 弱势群体，例如{gender：1}表示弱势群体是女性，list[]内可以叠加，也可以多次使用分开算
-# privileged_groups 优势群体，例如{gender：2}表示优势群体是男性，
-metric = BinaryLabelDatasetMetric(test_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
-text_res = MetricTextExplainer(metric)
+# # unprivileged_groups 弱势群体，例如{gender：1}表示弱势群体是女性，list[]内可以叠加，也可以多次使用分开算
+# # privileged_groups 优势群体，例如{gender：2}表示优势群体是男性，
+# metric = BinaryLabelDatasetMetric(test_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
+# text_res = MetricTextExplainer(metric)
 
-print('DI:', text_res.disparate_impact())
+# print('DI:', text_res.disparate_impact())
 
-# unprivileged_groups 弱势群体，例如{gender：1}表示弱势群体是女性，list[]内可以叠加，也可以多次使用分开算
-# privileged_groups 优势群体，例如{gender：2}表示优势群体是男性，
-train_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=train, label_names=['target'], protected_attribute_names=['Age'])
+# # unprivileged_groups 弱势群体，例如{gender：1}表示弱势群体是女性，list[]内可以叠加，也可以多次使用分开算
+# # privileged_groups 优势群体，例如{gender：2}表示优势群体是男性，
+# train_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=train, label_names=['target'], protected_attribute_names=['Age'])
 
-metric = BinaryLabelDatasetMetric(train_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
-text_res = MetricTextExplainer(metric)
+# metric = BinaryLabelDatasetMetric(train_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
+# text_res = MetricTextExplainer(metric)
 
-print('DI:', text_res.disparate_impact())
+# print('DI:', text_res.disparate_impact())
 
 
-'''method bias test'''
-# 测试模型偏见性
-# favorable_label 为好的数值，即无风险的代表数字
-# unfavorable_label 为坏的数值
-# df 为method输出的数据
-# label_names 作为目标的变量名
-# protected_attribute_names 需要保护的变量名，含偏见的变量名
-res_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=res, label_names=['target'], protected_attribute_names=['Age'])
+# '''method bias test'''
+# # 测试模型偏见性
+# # favorable_label 为好的数值，即无风险的代表数字
+# # unfavorable_label 为坏的数值
+# # df 为method输出的数据
+# # label_names 作为目标的变量名
+# # protected_attribute_names 需要保护的变量名，含偏见的变量名
+# res_data = BinaryLabelDataset(favorable_label=0, unfavorable_label=1, df=res, label_names=['target'], protected_attribute_names=['Age'])
 
-metric = ClassificationMetric(test_data, res_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
-text_res = MetricTextExplainer(metric)
+# metric = ClassificationMetric(test_data, res_data, unprivileged_groups=[{'Age':1}], privileged_groups=[{'Age':0}])
+# text_res = MetricTextExplainer(metric)
 
-print('EOD:', text_res.equal_opportunity_difference())
-print('ERR:', text_res.average_odds_difference())
+# print('EOD:', text_res.equal_opportunity_difference())
+# print('ERR:', text_res.average_odds_difference())
 
 
 print('down')

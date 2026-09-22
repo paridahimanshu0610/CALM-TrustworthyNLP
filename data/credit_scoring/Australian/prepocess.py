@@ -1,14 +1,21 @@
 import random
 import pandas as pd
 import json
+import math
+import os
 
 #####config
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
+
 name = "australian.dat"
 feature_size = 14 + 1   # Target_index = -1
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
 
-if train_size + dev_size + test_size != 1:
+if not math.isclose(train_size + dev_size + test_size, 1.0):
     print("sample size wrong!!!")
+
+os.makedirs('data', exist_ok=True)
 
 #####function
 def process_table(data):
@@ -33,20 +40,20 @@ def process_table(data):
     return data_tmp
 
 
-def json_save(data, dataname, out_jsonl=False):
+def json_save(data, dataname, out_jsonl=True):
     data_tmp = process_table(data)
     if out_jsonl:
-        with open('{}.jsonl'.format(dataname), 'w') as f:
+        with open('data/{}.jsonl'.format(dataname), 'w') as f:
             for i in data_tmp:
                 json.dump(i, f)
                 f.write('\n')
             print('-----------')
             print(f"{dataname} write done")
         f.close()
-    df = pd.DataFrame(data_tmp)
-    # 保存为 Parquet 文件
-    parquet_file_path = f'data/{dataname}.parquet'
-    df.to_parquet(parquet_file_path, index=False)
+    # df = pd.DataFrame(data_tmp)
+    # # 保存为 Parquet 文件
+    # parquet_file_path = f'data/{dataname}.parquet'
+    # df.to_parquet(parquet_file_path, index=False)
     return data_tmp
 
 
@@ -67,7 +74,7 @@ test_data = [data[i] for i in index_left]
 
 columns = [i for i in range(feature_size)]
 ss_data = pd.DataFrame(test_data, columns=columns)
-ss_data.to_csv('australian_test.csv', index=False)
+ss_data.to_csv('data/australian_test.csv', index=False)
 
 test_prompt_data = json_save(test_data, 'test')
 train_prompt_data = json_save(train_data, 'train')

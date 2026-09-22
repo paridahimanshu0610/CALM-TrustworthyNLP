@@ -3,16 +3,24 @@ import random
 import numpy as np
 import pandas as pd
 import json
+import math
+import os
+import statistics
 
 #####config
 from sklearn.model_selection import train_test_split
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
 
 name = "travel insurance.csv"
 feature_size = 10 + 1  # target_index = 4
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
 
-if train_size + dev_size + test_size != 1:
+if not math.isclose(train_size + dev_size + test_size, 1.0):
     print("sample size wrong!!!")
+
+os.makedirs('bias_data', exist_ok=True)
 
 mean_list = [('Agency', 'Name of agency'), ('Agency Type', 'Type of travel insurance agencies'),
              ('Distribution Channel', 'Distribution channel of travel insurance agencies'),
@@ -26,13 +34,13 @@ mean_list = [('Agency', 'Name of agency'), ('Agency Type', 'Type of travel insur
 def data_preparation(da):
     # Duration > 731 replaced by 731
     da = [[row[i] if i != 5 or row[i] <= 731 else 731 for i in range(len(row))] for row in da]
-    # Average Duration
+    # Median Duration (Rawat et al. 2021: values below 1 are imputed by the median duration)
     dura_colu = [row[5] for row in da]
-    dura_mean = int(sum(dura_colu) / len(dura_colu))
-    # Duration < 1 replace by Average Duration and Age > 99 replaced by 99
+    dura_median = statistics.median(dura_colu)
+    # Duration < 1 replace by median Duration and Age > 99 replaced by 99
     for row in da:
         row[10] = 99 if row[10] > 99 else row[10]
-        row[5] = dura_mean if row[5] < 1 else row[5]
+        row[5] = dura_median if row[5] < 1 else row[5]
     # 删除 Attribute: Gender
     da = [row[:9] + row[9 + 1:] for row in da]
     return da
@@ -41,9 +49,12 @@ def data_preparation(da):
 def process_table(data, mean_list):
     data_tmp = []
     prompt = 'Identify the claim status of insurance companies using the following table attributes for travel insurance status. Respond with only \'yes\' or \'no\', and do not provide any additional information. And the table attributes including 5 categorical attributes and 4 numerical attributes are as follows: \n'
-    for i in range(len(data[0]) - 1):  # data[0] (del Gender): 9 + 1 (5)
+    for i in range(len(data[0])):  # data[0] (del Gender): Claim (target) at index 4, 9 real features elsewhere
+        if i == 4:
+            continue
+        m_idx = i if i < 4 else i - 1
         st = "(categorical). \n" if type(data[0][i]) == str else "(numerical). \n"
-        prompt = prompt + f'{mean_list[i][0]}: ' + mean_list[i][1] + ' ' + st
+        prompt = prompt + f'{mean_list[m_idx][0]}: ' + mean_list[m_idx][1] + ' ' + st
     prompt = prompt + 'For instance: \'The insurance company has attributes: Agency: CBH, Agency Type: Travel Agency, Distribution Chanel: Offline, Product Name: Comprehensive Plan, Duration: 186, Destination: MALAYSIA, Net Sales: -29, Commision: 9.57, Age: 81.\', should be classified as \'no\'. \nText: '
 
     for j in range(len(data)):
@@ -64,7 +75,7 @@ def process_table(data, mean_list):
     return data_tmp
 
 
-def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
+def json_save(data, dataname, mean_list=mean_list, out_jsonl=True):
     data_tmp = process_table(data, mean_list)
     if out_jsonl:
         with open('{}.jsonl'.format(dataname), 'w') as f:
@@ -74,19 +85,11 @@ def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
             print('-----------')
             print("write done")
         f.close()
-    df = pd.DataFrame(data_tmp)
-    # 保存为 Parquet 文件
-    parquet_file_path = f'data/{dataname}.parquet'
-    df.to_parquet(parquet_file_path, index=False)
+    # df = pd.DataFrame(data_tmp)
+    # # 保存为 Parquet 文件
+    # parquet_file_path = f'data/{dataname}.parquet'
+    # df.to_parquet(parquet_file_path, index=False)
     return data_tmp
-
-
-def get_num(data):
-    data_con = np.array(data)
-    check = np.unique(data_con[:, 4])
-    check1 = (data_con[:, 4] == check[0]).sum()
-    check2 = (data_con[:, 4] == check[1]).sum()
-    return check1, check2
 
 
 def save_bias_data(feature_size, test_data, train_data):
@@ -99,11 +102,8 @@ def save_bias_data(feature_size, test_data, train_data):
 
 #####process
 data = pd.read_csv(name, sep=',', header=0, names=[i for i in range(feature_size)])
-save_data, drop_data = train_test_split(data, test_size=0.8, stratify=data[4], random_state=100)
 # data preprocessing
-
-che = get_num(save_data)
-data = data_preparation(save_data.values.tolist())
+data = data_preparation(data.values.tolist())
 
 random.seed(10086)
 train_ind = random.sample([i for i in range(len(data))], int(len(data) * train_size))

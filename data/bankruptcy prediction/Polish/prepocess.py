@@ -3,16 +3,22 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
 import json
+import math
+import os
 import arff
 
 #####config
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
 
 name = "year.arff"
 feature_size = 64 + 1  # Target_index = -1
 train_size, dev_size, test_size = 0.7, 0.1, 0.2
 
-if train_size + dev_size + test_size != 1:
+if not math.isclose(train_size + dev_size + test_size, 1.0):
     print("sample size wrong!!!")
+
+os.makedirs('gpt4-data', exist_ok=True)
 
 mean_list = ['net profit / total assets', 'total liabilities / total assets', 'working capital / total assets',
              'current assets / short-term liabilities',
@@ -89,7 +95,7 @@ def process_table(data, mean_list):
     return data_tmp
 
 
-def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
+def json_save(data, dataname, mean_list=mean_list, out_jsonl=True):
     data_tmp = process_table(data, mean_list)
     if out_jsonl:
         with open('{}.jsonl'.format(dataname), 'w') as f:
@@ -99,10 +105,10 @@ def json_save(data, dataname, mean_list=mean_list, out_jsonl=False):
             print('-----------')
             print(f"{dataname}.jsonl write done")
         f.close()
-    df = pd.DataFrame(data_tmp)
-    # 保存为 Parquet 文件
-    parquet_file_path = f'data/{dataname}.parquet'
-    df.to_parquet(parquet_file_path, index=False)
+    # df = pd.DataFrame(data_tmp)
+    # # 保存为 Parquet 文件
+    # parquet_file_path = f'data/{dataname}.parquet'
+    # df.to_parquet(parquet_file_path, index=False)
     return data_tmp
 
 
@@ -117,20 +123,12 @@ def json_save_gpt4(data, dataname, mean_list=mean_list):
     f.close()
 
 
-def get_num(data):
-    data_con = np.array(data)
-    check = np.unique(data_con[:, -1])
-    check1 = (data_con[:, -1] == check[0]).sum()
-    check2 = (data_con[:, -1] == check[1]).sum()
-    return check1, check2
-
-
 def save_gpt4_data(test_data):
     tmp_data = [row[-1] for row in test_data]
     _, gpt4_data = train_test_split(test_data, test_size=500, stratify=tmp_data, random_state=100)
     s1_data = [row for row in gpt4_data if row[-1] == '0']
     s2_data = [row for row in gpt4_data if row[-1] == '1']
-    s_data = s2_data + s1_data[:100 - len(s2_data)]
+    s_data = s2_data + s1_data[:max(0, 100 - len(s2_data))]
     s_data = pd.DataFrame(s_data)
     np.random.seed(42)
     random_index = np.random.permutation(s_data.index)
@@ -149,10 +147,8 @@ for i in range(1, 6):
         # 将数据集添加到列表中
         data.extend(data_tmp)
 data = np.array(data)
-save_data, drop_data = train_test_split(data, test_size=0.8, stratify=data[:, -1], random_state=100)
-che = get_num(save_data)
 
-data = data_split(save_data)
+data = data_split(data)
 
 save_gpt4_data(data[2])
 
